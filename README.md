@@ -1,23 +1,23 @@
 Gym Performance Analysis (SQL + Python)
 Project Overview
 
-This project analyzes the business performance of a multi-branch gym management system using SQL and Python. The objective is to evaluate revenue generation, customer retention, branch performance, and customer engagement using structured analytical techniques.
+This project analyzes the business performance of a multi-branch gym management system using SQL and Python. The goal is to evaluate revenue generation, customer retention, branch performance, and member engagement through structured analytical techniques.
 
-The dataset was synthetically generated to simulate a real-world subscription-based gym business.
+The dataset was synthetically generated to simulate a real-world subscription-based gym business environment.
 
 Tech Stack
 
-MySQL (Database & SQL Analysis)
+MySQL – Database design and SQL analysis
 
-Python (Pandas, Matplotlib)
+Python (Pandas, Matplotlib) – Data analysis and visualization
 
-Jupyter Notebook
+Jupyter Notebook – Python implementation
 
-Git & GitHub
+Git & GitHub – Version control
 
 Dataset Description
 
-The dataset was generated using Python and simulates a realistic gym management system with the following tables:
+The dataset was generated using Python and simulates a realistic gym management system with five relational tables:
 
 branches
 
@@ -29,7 +29,7 @@ subscriptions
 
 workout_logs
 
-Dataset scale:
+Dataset Scale:
 
 5,000 members
 
@@ -37,13 +37,11 @@ Dataset scale:
 
 50,000 workout session records
 
-Multiple cities and branches
+Multiple branches across cities
 
-The schema was designed with proper primary and foreign key relationships to maintain referential integrity.
+The database schema was designed with proper primary and foreign key constraints to ensure referential integrity.
 
-Database Schema
-
-Relationships:
+Database Relationships
 
 One branch → Many members
 
@@ -53,9 +51,9 @@ One member → Many workout logs
 
 One membership plan → Many subscriptions
 
-Key SQL Analysis
+SQL Analysis Performed
 
-The following analyses were performed using SQL:
+The following business analyses were conducted using SQL:
 
 Total revenue calculation
 
@@ -69,46 +67,61 @@ Monthly revenue trend
 
 Overall churn rate
 
-Churn by plan
+Churn rate by plan
 
-Engagement comparison (Active vs Expired)
+Engagement comparison (Active vs Expired members)
 
 Python Analysis
 
 Python was used for:
 
-Data merging and validation
+Merging relational tables
 
-Revenue cross-verification
+Validating SQL revenue results
 
 Churn distribution analysis
 
-Engagement aggregation
+Aggregating workout logs
 
-Visualization of revenue and trends
+Data visualization
 
-Workout logs were aggregated before merging to maintain correct granularity and avoid duplication.
+Workout logs were aggregated at member level before merging to maintain correct granularity and prevent data duplication.
 
 Key Insights
 
-Total revenue generated: ~41.87 Million
+Total revenue generated: approximately 41.87 Million
 
 Elite plan generated the highest revenue
 
-Bangalore contributed the majority of revenue
+Bangalore contributed the majority of total revenue
 
-Overall churn rate is high (~77%)
+Overall churn rate is approximately 77 percent
 
-Branch performance varies significantly
+Branch performance varies significantly across locations
 
-Engagement patterns differ among members
+Member engagement levels differ across subscription status
 
 Business Recommendations
 
-Implement customer retention strategies to reduce churn
+Implement retention strategies to reduce churn
 
-Introduce loyalty incentives for expiring members
+Introduce loyalty programs for expiring members
 
-Improve performance of low-revenue branches
+Improve performance in lower-revenue branches
 
-Use engagement metrics to identify at-risk customers
+Use engagement metrics to identify potential churn risks
+
+Project Structure
+
+Gym-Performance-Analysis
+│
+├── Data
+│ ├── branches.csv
+│ ├── members.csv
+│ ├── membership_plans.csv
+│ ├── subscriptions.csv
+│ └── workout_logs.csv
+│
+├── sql_analysis.sql
+├── GYM_Analysis.ipynb
+└── README.md
